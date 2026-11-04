@@ -7,6 +7,12 @@ console driver.
 |-------|--------|---------------------|
 | Sorting | [`sorting/randomized-quicksort-select`](sorting/randomized-quicksort-select) | Merge sort, Quicksort with randomized partition, Randomized-Select (i-th order statistic) |
 | Sorting | [`sorting/linear-time-sorts`](sorting/linear-time-sorts) | Counting sort, Radix sort (plus Merge/Quick sort for comparison) |
+| Sorting | [`sorting/elementary-sorts`](sorting/elementary-sorts) | Selection sort and bubble sort with a menu-driven demo |
+| Combinatorics | [`combinatorics`](combinatorics) | Arrangements, combinations, factorial; generation of permutations and combinations |
+| Linked lists | [`linked-lists`](linked-lists) | Doubly linked list, stack and queue on linked nodes |
+| Expressions | [`expression-conversion`](expression-conversion) | Infix ↔ postfix ↔ prefix conversion using a stack |
+| Graphs | [`graph-dfs`](graph-dfs) | Depth-first search: recursive and iterative (own stack), DFS numbers and tree edges |
+| Graphs | [`shortest-paths`](shortest-paths) | Dijkstra's and Floyd's shortest-path algorithms |
 | Trees | [`trees`](trees) | Binary tree with traversals; binary search tree |
 | Heap | [`heap`](heap) | Max/Min-heap, heap sort, priority queue (insert / extract / increase-key); see its README, THEORY and TESTS |
 | Graphs | [`mst/kruskal`](mst/kruskal), [`mst/prim`](mst/prim) | Minimum spanning tree: Kruskal (with Disjoint Set Union) and Prim; see [`mst/README.md`](mst/README.md) |
@@ -21,7 +27,8 @@ Each subfolder is self-contained. Use whichever build file it contains:
 # Makefile projects: heap, trees, mst/kruskal, mst/prim
 cd heap && make
 
-# CMake projects: sorting/*, hash-tables/*
+# CMake projects: sorting/*, hash-tables/*, combinatorics, linked-lists,
+# expression-conversion, graph-dfs, shortest-paths
 cd sorting/linear-time-sorts
 cmake -S . -B build && cmake --build build
 ```
