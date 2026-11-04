@@ -1,0 +1,22 @@
+# build artifacts
+build/
+cmake-build-*/
+*.o
+*.out
+
+# IDE
+.idea/
+.vscode/
+*.user
+
+# compiled binaries
+heap/Lab_05_01
+heap/Lab_05_02
+trees/Lab_04_01
+trees/Lab_04_02
+mst/kruskal/kruskal
+mst/prim/lab_06_02
+
+# generated docs / archives
+*.docx
+*.tar.gz
