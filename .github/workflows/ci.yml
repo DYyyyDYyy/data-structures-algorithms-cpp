@@ -1,0 +1,28 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  # Every lab builds on its own: CMake projects and plain Makefiles.
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - name: CMake labs
+        run: |
+          for f in $(find . -name CMakeLists.txt | sort); do
+            d=$(dirname "$f"); echo "::group::$d"
+            cmake -S "$d" -B "build/$d" -DCMAKE_BUILD_TYPE=Release && cmake --build "build/$d"
+            echo "::endgroup::"
+          done
+      - name: Makefile labs
+        run: |
+          for f in $(find . -name Makefile -not -path './build/*' | sort); do
+            d=$(dirname "$f"); echo "::group::$d"; make -C "$d"; echo "::endgroup::"
+          done

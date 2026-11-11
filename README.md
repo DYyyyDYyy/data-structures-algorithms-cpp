@@ -1,5 +1,7 @@
 # Data Structures & Algorithms in C++
 
+[![ci](https://github.com/DYyyyDYyy/data-structures-algorithms-cpp/actions/workflows/ci.yml/badge.svg)](https://github.com/DYyyyDYyy/data-structures-algorithms-cpp/actions/workflows/ci.yml)
+
 Implementations of classic data structures and algorithms in C++, each with a small
 console driver.
 
